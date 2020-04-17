@@ -21,6 +21,7 @@ end
 
 function main:ADDON_LOADED(name)
 	if (name == "ZGAutoRoll") then
+		print("ZG AutoRoll enabled!")
 		getItemInfo(minItemNumber)
 		main:RegisterEvent("START_LOOT_ROLL")
 	end
