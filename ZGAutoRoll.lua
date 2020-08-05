@@ -1,10 +1,12 @@
 local addon = ...
 local main = CreateFrame("Frame")
 local items = {}
-local minItemNumber = 19698
-local maxItemNumber = 19715
+local minZGItemNumber = 19698
+local maxZGItemNumber = 19715
+local minAQItemNumber = 20858
+local maxAQItemNumber = 20865
 
-function getItemInfo(itemID)
+function getItemInfo(itemID, maxItemNumber)
 	if (itemID > maxItemNumber) then
 		return
 	end
@@ -12,17 +14,16 @@ function getItemInfo(itemID)
 	local item = Item:CreateFromItemID(itemID)
 	item:ContinueOnItemLoad(
 		function()
-			print(item:GetItemName())
 			items[item:GetItemName()] = true
-			getItemInfo(itemID + 1)
+			getItemInfo(itemID + 1, maxItemNumber)
 		end
 	)
 end
 
 function main:ADDON_LOADED(name)
 	if (name == "ZGAutoRoll") then
-		print("ZG AutoRoll enabled!")
-		getItemInfo(minItemNumber)
+		getItemInfo(minZGItemNumber, maxZGItemNumber)
+		getItemInfo(minAQItemNumber, maxAQItemNumber)
 		main:RegisterEvent("START_LOOT_ROLL")
 	end
 end

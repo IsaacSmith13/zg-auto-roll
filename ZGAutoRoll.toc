@@ -1,7 +1,7 @@
 ## Interface: 11304
 ## Title: ZGAutoRoll
-## Notes: Rolls need automatically on ZG rep coins
+## Notes: Rolls need automatically on ZG and AQ rep items
 ## Author: IsaacSmith13
-## Version: 1.00-Release
+## Version: 1.02-Release
 
 ZGAutoRoll.lua

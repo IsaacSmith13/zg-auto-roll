@@ -1,0 +1,12 @@
+commit 0ca2b77220fdb921984dbdb03d012e286a61a2d2
+Author: Isaac <Isaac13Smith@gmail.com>
+Date:   Fri Apr 17 13:15:58 2020 -0400
+
+    Added license and readme
+
+commit e271129c871f2a1863c223bda42212ecd8c37836
+Author: Isaac <Isaac13Smith@gmail.com>
+Date:   Fri Apr 17 12:55:43 2020 -0400
+
+    Intial commit
+
